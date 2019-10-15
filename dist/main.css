@@ -1,0 +1,78 @@
+/* FONTS IMPORTADAS*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+/* VARIÁVEIS*/
+:root{
+  --primary-color: #eee;
+  --secondary-color: red;
+  --ff: 'Montserrat', sans-serif;
+  --body-height: calc(100vh - 200px);
+}
+
+/*
+RESET CSS
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}   
+
+html,
+body{
+  width: 100vw;
+  height: 100%;
+  font-size: 16px;
+  font-family: var(--ff);
+}
+
+/*HEADER*/
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+}
+
+header .logo {
+  border: 5px solid red;
+}
+
+/* nav {
+  border: solid 3px yellow;
+  width: 50%;
+
+} */
+
+nav ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 50vw;
+
+  border: 2px solid blue;
+  
+
+}
+
+li {
+  list-style: none;
+  height: 70px;
+  border: 1px solid black;
+  line-height: 70px ;
+  
+}
+
+a {
+  text-decoration: none;
+  border: 1px solid red;
+  height: 100%;
+  display: inline-block;
+  cursor: pointer;
+  text-transform: uppercase;
+}
