@@ -6,7 +6,13 @@
   --primary-color: #eee;
   --secondary-color: red;
   --ff: 'Montserrat', sans-serif;
-  --body-height: calc(100vh - 200px);
+  --nav-fs: 2.1rem;
+  --body-height: 100vh;
+  --nav-height: 70px;
+  --body-width: 100vw;
+  --bandeira-vermelho: rgb(222, 0, 11);
+  --bandeira-amarelo: rgb(255,207,0);
+  --bandeira-preta:rgb(0,0,0);
 }
 
 /*
@@ -23,10 +29,17 @@ RESET CSS
 
 html,
 body{
-  width: 100vw;
-  height: 100%;
+  width: var(--body-width);
+  height: var(--body-height);
   font-size: 16px;
   font-family: var(--ff);
+}
+
+body {
+  background-image: url(./img/benguela-angola.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /*HEADER*/
@@ -34,26 +47,46 @@ body{
 header{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 
+
+  border: solid 5px green;
 
 }
 
 header .logo {
-  border: 5px solid red;
+  border: 1px solid red;
 }
 
-/* nav {
-  border: solid 3px yellow;
-  width: 50%;
+.logo span{
+  /* border: 1px solid yellow; */
+  display: inline-block;
+  font-size: var(--nav-fs);
+  
+}
 
-} */
+.logo span:nth-child(1)::first-letter{
+  color:var(--bandeira-vermelho);
+}
+.logo span:nth-child(2)::first-letter{
+  color: var(--bandeira-amarelo);
+}
+.logo span:nth-child(3)::first-letter{
+  color: var(--bandeira-preta);
+}
+
+ 
+nav {
+  border: solid 3px yellow;
+
+
+}
 
 nav ul{
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 50vw;
+  /* width: calc(--body-width - ); */
 
   border: 2px solid blue;
   
@@ -75,4 +108,23 @@ a {
   display: inline-block;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+/* MAIN */
+main{
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: calc(var(--body-height) - var(--nav-height));
+
+}
+
+h1{
+  border: 2px solid blue;
+}
+
+h1::first-letter{
+  color: red;
 }
