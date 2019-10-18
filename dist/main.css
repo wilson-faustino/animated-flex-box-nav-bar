@@ -48,7 +48,7 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-around;
-
+  position: absolute;
 
   border: solid 5px green;
 
@@ -56,6 +56,7 @@ header{
 
 header .logo {
   border: 1px solid red;
+  
 }
 
 .logo span{
@@ -78,41 +79,49 @@ header .logo {
  
 nav {
   border: solid 3px yellow;
-
-
+  width: 50%;
+  height: 100vh;
+  
 }
 
 nav ul{
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
   /* width: calc(--body-width - ); */
 
   border: 2px solid blue;
-  
+
 
 }
 
 li {
   list-style: none;
   height: 70px;
-  border: 1px solid black;
+  border: 2px solid black;
   line-height: 70px ;
-  
+  display: block;
+  width: 100%;
+
+
 }
 
 a {
   text-decoration: none;
-  border: 1px solid red;
-  height: 100%;
+  border: yellowgreen 2px solid;
+
   display: inline-block;
   cursor: pointer;
   text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+
 }
 
 /* MAIN */
 main{
-  border: 2px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
